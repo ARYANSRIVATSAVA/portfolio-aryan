@@ -14,12 +14,12 @@ export interface Workflow {
 }
 
 // Helper function to get all workflows with their category
-export function getAllWorkflows(): (Workflow & { category: string })[] {
-  const all: (Workflow & { category: string })[] = []
+export function getAllWorkflows(): Workflow[] {
+  const all: Workflow[] = []
   
   Object.entries(workflows).forEach(([category, workflowList]) => {
     workflowList.forEach(workflow => {
-      all.push({ ...workflow, category })
+      all.push({ ...workflow, category: category as Workflow['category'] })
     })
   })
   
