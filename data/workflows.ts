@@ -135,7 +135,7 @@ export const workflows = {
         { url: '/images/hr-recruiting/workflow-2/step1-upload.jpeg', step: 'Step 1: Upload Job Description & Resumes', description: 'Upload interface for job descriptions and candidate resumes with drag-and-drop support' },
         { url: '/images/hr-recruiting/workflow-2/step2-results.jpeg', step: 'Step 2: Candidate Results & Rankings', description: 'Candidate ranking view with fit scores and bucket categorization' },
         { url: '/images/hr-recruiting/workflow-2/step2-jobs-page.jpeg', step: 'Step 2: Jobs Page View', description: 'Alternative view showing job listings and candidate distribution' },
-        { url: '/images/hr-recruiting/workflow-2/step3-analysis-video.mov', step: 'Step 3: Detailed Candidate Analysis', description: 'Video demonstration of comprehensive candidate analysis with section scores, skill matrix, and professional timeline' }
+        { url: 'https://dqsh1rpdh17ifqm3.public.blob.vercel-storage.com/talentvibe-candidate-analysis-clip.mov', step: 'Step 3: Detailed Candidate Analysis', description: 'Video demonstration of comprehensive candidate analysis with section scores, skill matrix, and professional timeline' }
       ],
       category: 'hrRecruiting' as const
     }
