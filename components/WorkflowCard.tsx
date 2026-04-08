@@ -15,7 +15,7 @@ interface Workflow {
   description: string
   keyFeatures?: string[]
   images: WorkflowImage[]
-  category: 'salesMarketing' | 'itOperations' | 'hrRecruiting' | 'other'
+  category: 'salesMarketing' | 'itOperations' | 'erpIntegration' | 'hrRecruiting' | 'other'
 }
 
 interface WorkflowCardProps {

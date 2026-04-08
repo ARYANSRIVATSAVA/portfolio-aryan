@@ -15,7 +15,7 @@ interface Workflow {
   description: string
   keyFeatures?: string[]
   images: WorkflowImage[]
-  category: 'salesMarketing' | 'itOperations' | 'hrRecruiting' | 'other'
+  category: 'salesMarketing' | 'itOperations' | 'erpIntegration' | 'hrRecruiting' | 'other'
 }
 
 interface WorkflowDetailViewProps {
@@ -25,6 +25,7 @@ interface WorkflowDetailViewProps {
 const categoryLabels = {
   salesMarketing: 'Sales & Marketing',
   itOperations: 'IT Operations',
+  erpIntegration: 'ERP Integration',
   hrRecruiting: 'HR & Recruiting',
   other: 'Other Automations'
 }

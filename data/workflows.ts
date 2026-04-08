@@ -10,7 +10,7 @@ export interface Workflow {
   description: string
   keyFeatures?: string[]
   images: WorkflowImage[]
-  category: 'salesMarketing' | 'itOperations' | 'hrRecruiting' | 'other'
+  category: 'salesMarketing' | 'itOperations' | 'erpIntegration' | 'hrRecruiting' | 'other'
 }
 
 // Helper function to get all workflows with their category
@@ -97,6 +97,73 @@ export const workflows = {
         { url: '/images/it-operations/workflow-1/workflow-image.jpeg', step: 'Workflow Overview', description: 'Complete RAG system architecture and workflow diagram' }
       ],
       category: 'itOperations' as const
+    },
+    {
+      id: 'power-automate-project-approval',
+      title: 'Power Automate — Project Task Approval & AI Approval Recommendations',
+      description: 'Microsoft Power Automate flows for project task approval, plus an AI-assisted path that surfaces approval recommendations so reviewers can decide faster with consistent, explainable guidance.',
+      keyFeatures: [
+        'Project task approval workflow: Automates routing, notifications, and state updates so tasks move through approval stages without manual handoffs.',
+        'AI-based approval recommendations: Uses model-driven suggestions to highlight risk, completeness, or policy fit alongside the raw task payload.',
+        'Operational fit: Designed for internal project governance—reducing cycle time while keeping an auditable trail of who approved what and when.'
+      ],
+      images: [],
+      category: 'itOperations' as const
+    },
+    {
+      id: 'faa-legal-data-playwright-rpa',
+      title: 'Simulated RPA — FAA Legal & Regulatory Web Data (Playwright)',
+      description: 'A browser-automation style pipeline built with Playwright to simulate RPA: navigating public FAA legal and regulatory sources, retrieving unstructured online knowledge, and preparing it for downstream structuring or knowledge use.',
+      keyFeatures: [
+        'Playwright-driven retrieval: Automates realistic page interaction and extraction where content is unstructured and spread across web resources.',
+        'FAA legal knowledge focus: Targets aviation legal/regulatory material suitable for compliance research or internal knowledge initiatives.',
+        'RPA-style pattern: Mirrors how enterprise RPA bots fetch external data—useful for prototyping before hardening for production guardrails and scheduling.'
+      ],
+      images: [],
+      category: 'itOperations' as const
+    },
+    {
+      id: 'sharepoint-project-knowledge-documentation',
+      title: 'SharePoint Project Knowledge Base & Documentation Dashboards',
+      description: 'A dynamic project knowledge base backed by SharePoint: new files, blueprints, and reports trigger updates so content stays searchable and easy to reference. Complemented by automated documentation tracking and internal dashboards that improve accessibility and operational transparency.',
+      keyFeatures: [
+        'Dynamic knowledge base: Ingests or indexes new uploads to SharePoint so the project corpus stays current without manual cataloging.',
+        'Searchable reference: Makes blueprints, reports, and working files discoverable for engineers and PMs during delivery.',
+        'Documentation tracking: Monitors project documentation health (coverage, freshness, or location) to reduce "lost in email" artifacts.',
+        'Internal dashboards: Surfaces adoption, gaps, or key metrics so leadership and teams share a single transparent view of documentation and knowledge status.'
+      ],
+      images: [],
+      category: 'itOperations' as const
+    }
+  ],
+  erpIntegration: [
+    {
+      id: 'erpnext-ai-demand-forecast',
+      title: 'ERPNext Integration & AI Demand Forecasting',
+      description: 'An end-to-end automation that pulls warehouse, stock, sales, supplier, and item data from ERPNext, merges inventory with sales signals, runs AI-powered demand forecasting via a LangChain agent and OpenAI, then parses results, filters items that need reordering, and creates purchase orders back in ERPNext—closing the loop from data extraction to procurement action.',
+      keyFeatures: [
+        'Step 1 — Trigger: Manual Trigger starts the run when you click Execute workflow.',
+        'Step 2 — Warehouse Data: warehouses-list (ERPNext) loads warehouses; Filter (ERPNext) narrows the list by criteria.',
+        'Step 3 — Stock Data: stock-entry and stock-entry-detail (ERPNext) retrieve stock entries and line-level detail.',
+        'Step 4 — Sales Data: sales-invoices and sales_invoices_detail (ERPNext) extract invoices and supporting detail.',
+        'Step 5 — Supplier Data: supplier and supplier_detail (ERPNext) load supplier master and extended fields.',
+        'Step 6 — Item Data: item-list and item-detail (ERPNext) fetch items and details including reorder levels.',
+        'Step 7 — Data Combination: Combine All Data Sources (Merge) joins every upstream pull for unified processing.',
+        'Step 8 — Data Merging: Merge Inventory & Sales Data (Code) builds one dataset that pairs stock with sales behavior.',
+        'Step 9 — AI Forecasting: AI Demand Forecasting (LangChain Agent) with OpenAI (LMChatOpenAi) forecasts demand from the merged data.',
+        'Step 10 — Parse AI Output: Parse AI Response (Code) turns model output into structured fields for downstream nodes.',
+        'Step 11 — Filter Reorders: Filter: Reorder Needed keeps only SKUs that require replenishment.',
+        'Step 12 — Create Purchase Order: Code drafts purchase orders; Create Purchase Order in ERPNext posts them into ERPNext.',
+        'Data flow: Extraction steps chain into merge → inventory/sales merge → AI forecast → parse → reorder filter → PO creation, with each node feeding the next for a single streamlined pipeline.',
+        'Sample forecast output (per item): JSON-style fields such as product_id, product_name, item_group, stock_uom, current_stock, warehouse, reorder_point, reorder_qty, supplier_id/name, units_sold_30days, avg_daily_sales, sales_invoice_count, avg_unit_price, trend, and unit_cost—supporting reorder decisions with concrete numbers.'
+      ],
+      images: [
+        { url: '/images/erp-integration/erp-demand-forecast/overview.png', step: 'Workflow overview', description: 'High-level view of the ERPNext extraction, merge, AI forecasting, and purchase order flow.' },
+        { url: '/images/erp-integration/erp-demand-forecast/workflow-1.png', step: 'Workflow canvas (1)', description: 'n8n workflow showing ERPNext nodes, merges, and the forecasting path.' },
+        { url: '/images/erp-integration/erp-demand-forecast/workflow-2.png', step: 'Workflow canvas (2)', description: 'Additional workflow detail across data pulls and processing steps.' },
+        { url: '/images/erp-integration/erp-demand-forecast/workflow-3.png', step: 'Workflow canvas (3)', description: 'Forecasting, parsing, filtering, and ERPNext purchase order creation.' }
+      ],
+      category: 'erpIntegration' as const
     }
   ],
   hrRecruiting: [

@@ -41,7 +41,7 @@ export default function Home() {
               </p>
               
               <p>
-                In my experience, I've built AI automations for <span className="text-blue-400 font-medium">IT operations, HR/recruiting, research, and sales & marketing</span> — including lead generation, email outreach, lead qualification and scoring, lead enrichment, and automated HubSpot integration. I've used a variety of tools, from Python, SQL, and GPT-driven workflows to no-code platforms like N8N, Zapier, and Cursor. I have <span className="text-purple-400 font-medium">extensive experience working with LLM APIs and other APIs</span> to build robust, scalable automation solutions.
+                In my experience, I've built AI automations for <span className="text-blue-400 font-medium">IT operations, HR/recruiting, research, and sales & marketing</span> — including lead generation, email outreach, lead qualification and scoring, lead enrichment, and automated HubSpot integration. I regularly work with GitHub, LangChain, LLM APIs, Microsoft Power Automate, Microsoft Copilot, and Claude, alongside Python, SQL, GPT-driven workflows, and no-code platforms like N8N, Zapier, and Cursor, to deliver robust automation backed by APIs and integrations.
               </p>
               
               <p className="pt-4 text-gray-300">
@@ -61,6 +61,10 @@ export default function Home() {
         <WorkflowSection 
           category="IT Operations" 
           workflows={workflows.itOperations}
+        />
+        <WorkflowSection 
+          category="ERP Integration" 
+          workflows={workflows.erpIntegration}
         />
         <WorkflowSection 
           category="HR & Recruiting" 
