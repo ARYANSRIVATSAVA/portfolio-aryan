@@ -121,19 +121,6 @@ export const workflows = {
       ],
       images: [],
       category: 'itOperations' as const
-    },
-    {
-      id: 'sharepoint-project-knowledge-documentation',
-      title: 'SharePoint Project Knowledge Base & Documentation Dashboards',
-      description: 'A dynamic project knowledge base backed by SharePoint: new files, blueprints, and reports trigger updates so content stays searchable and easy to reference. Complemented by automated documentation tracking and internal dashboards that improve accessibility and operational transparency.',
-      keyFeatures: [
-        'Dynamic knowledge base: Ingests or indexes new uploads to SharePoint so the project corpus stays current without manual cataloging.',
-        'Searchable reference: Makes blueprints, reports, and working files discoverable for engineers and PMs during delivery.',
-        'Documentation tracking: Monitors project documentation health (coverage, freshness, or location) to reduce "lost in email" artifacts.',
-        'Internal dashboards: Surfaces adoption, gaps, or key metrics so leadership and teams share a single transparent view of documentation and knowledge status.'
-      ],
-      images: [],
-      category: 'itOperations' as const
     }
   ],
   erpIntegration: [
