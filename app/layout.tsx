@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Aryan Srivatsava - AI Automation Portfolio',
-  description: 'AI Automation Engineer & Product Builder | 4+ years experience in AI automation, workflows, and internal tools | Master\'s in Computer Science | Specializing in IT operations, HR/recruiting, sales & marketing automation',
+  description: 'AI Automation Engineer & Product Builder | Experienced in AI automation, workflows, and internal tools | Master\'s in Computer Science | Specializing in IT operations, HR/recruiting, sales & marketing automation',
 }
 
 export default function RootLayout({
