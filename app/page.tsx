@@ -37,7 +37,7 @@ export default function Home() {
               </p>
               
               <p>
-                I completed my <span className="text-purple-400 font-medium">Master's in Computer Science</span>, and I have around <span className="text-blue-400 font-medium">4 years of professional experience</span> in AI automation, AI product building, and applied AI in research.
+                I completed my <span className="text-purple-400 font-medium">Master's in Computer Science</span>, and I have around <span className="text-blue-400 font-medium"> Experienced</span> in AI automation, AI product building, and applied AI in research.
               </p>
               
               <p>
